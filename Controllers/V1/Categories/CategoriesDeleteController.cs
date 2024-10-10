@@ -1,16 +1,22 @@
 using Microsoft.AspNetCore.Mvc;
 using ProductsOrdersAPI.Repositories;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace ProductsOrdersAPI.Controllers.V1.Categories;
 
 [ApiController]
 [Route("api/v1/categories")]
+[Tags("Categories")]
 public class CategoriesDeleteController : CategoriesController
 {
-    public CategoriesDeleteController(ICategoryRepository categoryRepository) : base(categoryRepository) {}
+    public CategoriesDeleteController(ICategoryRepository categoryRepository) : base(categoryRepository) { }
 
     // DELETE: api/v1/categories/{id}
     [HttpDelete("{id}")]
+    [SwaggerOperation(
+        Summary = "Delete a category",
+        Description = "Removes a category from the system by its ID"
+    )]
     public async Task<IActionResult> DeleteCategory(int id)
     {
         try
