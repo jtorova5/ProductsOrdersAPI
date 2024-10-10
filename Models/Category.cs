@@ -28,9 +28,4 @@ public class Category
     }
 
     public Category() {}
-
-    internal static void Seed(ModelBuilder modelBuilder)
-    {
-        throw new NotImplementedException();
-    }
 }

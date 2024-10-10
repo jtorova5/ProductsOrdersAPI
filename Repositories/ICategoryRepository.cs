@@ -4,9 +4,9 @@ namespace ProductsOrdersAPI.Repositories;
 
 public interface ICategoryRepository
 {
-    Task<IEnumerable<Category>> GetAllCategories();
-    Task<Category> GetCategoryById(int id);
-    Task CreateCategory(Category category);
-    Task UpdateCategory(Category category);
-    Task DeleteCategory(int id);
+    Task<IEnumerable<Category>> GetAll();
+    Task<Category> GetById(int id);
+    Task Create(Category category);
+    Task Update(Category category);
+    Task Delete(int id);
 }
