@@ -1,6 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Runtime.CompilerServices;
+using Microsoft.EntityFrameworkCore;
 
 namespace ProductsOrdersAPI.Models;
 
@@ -27,4 +28,9 @@ public class Category
     }
 
     public Category() {}
+
+    internal static void Seed(ModelBuilder modelBuilder)
+    {
+        throw new NotImplementedException();
+    }
 }
